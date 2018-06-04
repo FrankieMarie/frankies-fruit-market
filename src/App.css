@@ -63,3 +63,63 @@ nav {
 .nav-links:hover {
   color: #e72f51;
 }
+
+/* FRUIT LIST */
+.fruit-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+.card img{
+  width: 100%;
+  height: 35em;
+  object-fit: cover;
+}
+.read-more {color: #e72f51;}
+.btn {
+  background: #e72f51;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  border-radius: 2em;
+  cursor: pointer;
+  border-style: none;
+}
+
+.btn:hover {
+  background: #eaeaea;
+  color: #333;
+}
+@media screen and (max-width: 1200px) {
+  .card img{
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 900px) {
+  .fruit-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .card img{
+    width: 100%;
+    height: 25em;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    margin: 1rem;
+  }
+  .fruit-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .card img{
+    width: 100%;
+    height: 20em;
+    object-fit: cover;
+  }
+}
