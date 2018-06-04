@@ -8,7 +8,7 @@ const Fruit = ({fruit}) => {
       <img src={"http://localhost:8000/"+fruitImage} alt="" className="fruit-image"/>
       <div className="card-content">
         <h3 className="card-title">{name}</h3>
-        <p>$ {price} / lb</p>
+        <p>$ {price} / <small>box</small></p>
         <p>{desc.description.substring(0, 160)}...&nbsp;
           <a href={"/fruit/"+_id} className="read-more">
           <small>Read more</small>

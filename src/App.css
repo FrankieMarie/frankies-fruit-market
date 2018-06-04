@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, sans-serif;
+  margin: 1rem 3rem;
+}
+
+/* TOP NAV */
+.main-nav {text-align: center;}
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+.cart, #search {
+  align-self: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  nav {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    border-bottom: 1px dotted grey;
+    margin-bottom: 2em;
+  }
+  .cart {margin-bottom: 1em;}
+  a.nav-links {float: left;}
+}
+.logo {
+  background-image: url("./ffm_logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 15vh;
+}
+.search {
+  border: none;
+  border-bottom: 1px solid #e72f51;
+  padding: .5rem 0;
+  font-size: 1em;
+  width: 100%;
+}
+.search:focus {
+  outline: none;
+  border-bottom: 2px solid #e72f51;
+}
+/* SEARCH INPUT PLACEHOLDER - SHIFT RIGHT IN FOCUS */
+.search::-webkit-input-placeholder {text-indent: 0px; transition: text-indent 0.5s ease;}
+.search::-moz-placeholder {text-indent: 0px; transition: text-indent 0.5s ease;}
+.search:-moz-placeholder {text-indent: 0px; transition: text-indent 0.5s ease;}
+.search:-ms-input-placeholder {text-indent: 0px; transition: text-indent 0.5s ease;}
+.search:focus::-webkit-input-placeholder {text-indent: 1000px; transition: text-indent 0.5s ease;}
+.search:focus::-moz-placeholder {text-indent: 1000px; transition: text-indent 0.5s ease;}
+.search:focus:-moz-placeholder {text-indent: 1000px; transition: text-indent 0.5s ease;}
+.search:focus:-ms-input-placeholder {text-indent: 1000px; transition: text-indent 0.5s ease;}
+
+.nav-links {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: black;
+  float: right;
+}
+.nav-links:hover {
+  color: #e72f51;
+}
