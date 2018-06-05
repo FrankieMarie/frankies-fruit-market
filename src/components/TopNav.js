@@ -17,8 +17,8 @@ class TopNav extends Component {
             name="searchText"
             value={this.searchText}
             onChange={this.props.onTextChange}
-          />} />
-
+          />}
+        />
         </div>
         <div className="cart">
           <a href="/cart" className="nav-links">

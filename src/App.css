@@ -193,3 +193,24 @@ nav {
   }
 }
 
+/* FOOTER */
+.footer {
+  margin-top: 2em;
+  margin-left: -47.997px;
+  position: absolute;
+  width: 100%;
+  height: 5vh;
+  background-color: #e72f51;
+}
+
+.admin-login {
+  color: #fff;
+  text-decoration: none;
+  padding: 1.1em;
+  float: right;
+}
+
+.admin-login:hover {color: #d8d8d8;}
+
+/* LOGIN */
+

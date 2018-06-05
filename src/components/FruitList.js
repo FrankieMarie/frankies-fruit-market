@@ -15,8 +15,8 @@ class FruitList extends Component {
   }
 }
 
-function mapStateToProps(state){
-  return {fruits: state.fruits}
-}
+const mapStateToProps = (state) => ({
+  fruits: state.fruits
+})
 
 export default connect(mapStateToProps)(FruitList)
