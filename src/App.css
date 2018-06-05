@@ -123,3 +123,23 @@ nav {
     object-fit: cover;
   }
 }
+
+/* SINGLE FRUIT PAGE */
+.single-fruit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.single-fruit-img {max-width: 45vw;}
+.single-fruit .back {
+  max-width: 6vw;
+  min-width: 80px;
+}
+@media screen and (max-width: 768px) {
+  .single-fruit-img {max-width: 100%;}
+  .single-fruit {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+}
