@@ -130,7 +130,10 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
 }
-.single-fruit-img {max-width: 45vw;}
+.single-fruit-img {
+  max-width: 45vw;
+  object-fit: cover;
+}
 
 .single-fruit .back {
   max-width: 6vw;
@@ -140,22 +143,34 @@ nav {
 .fruit-imgs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  object-fit: cover;
 }
 
 .fruit-imgs img {
   margin: 2em 0 0 0;
-  max-width: 12vw;
+  object-fit: cover;
+  height: 20em;
+  max-width: 15em;
+  min-width: 5em;
 }
 
-@media screen and (max-width: 900px) {
-  .fruit-imgs {
-    display: none;
+@media screen and (max-width: 1234px) {
+  .single-fruit-img {
+    height: 70vh;
+    object-fit: cover;
   }
 }
 
+@media screen and (max-width: 900px) {
+  .fruit-imgs {display: none;}
+  .single-fruit-img {
+    max-width: 45vw;
+    max-height: 50vh;
+  }
+
+}
+
 @media screen and (max-width: 768px) {
-  .single-fruit-img {max-width: 100%;}
+  .single-fruit-img {min-width: 100%;}
   .single-fruit {
     display: grid;
     grid-template-columns: 1fr;
@@ -171,6 +186,7 @@ nav {
   .fruit-imgs img {
     margin: 2em 0 0 0;
     max-width: 25vw;
+    height: 15em;
   }
 }
 
