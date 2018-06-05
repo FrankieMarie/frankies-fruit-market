@@ -5,7 +5,8 @@ import Fruit from './Fruit'
 
 class FruitList extends Component {
   render() {
-    const listOfFruits = this.props.fruits.map(fruit => <Fruit key={fruit._id} fruit={fruit} />)
+    const displayFruits = this.props.fruits.filter(fruit => fruit.name.toLowerCase().indexOf(this.props.searchText.toLowerCase()) !== -1);
+    const listOfFruits = displayFruits.map(fruit => <Fruit key={fruit._id} fruit={fruit} />)
     return (
       <div className="fruit-list">
         {listOfFruits}

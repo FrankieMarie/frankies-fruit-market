@@ -28,7 +28,7 @@ nav {
 }
 .logo {
   background-image: url("./ffm_logo.png");
-  background-position: center;
+  background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
   height: 15vh;
