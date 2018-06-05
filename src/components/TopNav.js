@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Route } from 'react-router-dom'
 
 class TopNav extends Component {
   render() {
@@ -9,14 +10,15 @@ class TopNav extends Component {
           <a href="/"><div className="logo"></div></a>
         </div>
         <div id="search">
-          <input
-            type="search"
+        <Route exact path="/" render={()=><input
+            type="text"
             className="search"
             placeholder="Search fruits"
             name="searchText"
             value={this.searchText}
             onChange={this.props.onTextChange}
-          />
+          />} />
+
         </div>
         <div className="cart">
           <a href="/cart" className="nav-links">
