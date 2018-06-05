@@ -158,6 +158,9 @@ nav {
     height: 70vh;
     object-fit: cover;
   }
+  .fruit-imgs img {
+    height: 15em;
+  }
 }
 
 @media screen and (max-width: 900px) {
