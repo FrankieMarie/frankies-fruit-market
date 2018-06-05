@@ -6,10 +6,12 @@ import store from './store'
 
 import { fetchFruits } from './actions/fruits'
 import { fetchOrders } from './actions/orders'
+import { fetchImages } from './actions/images';
 
 let newStore = store()
 newStore.dispatch(fetchFruits())
 newStore.dispatch(fetchOrders())
+newStore.dispatch(fetchImages())
 
 ReactDOM.render(
   <Provider store={newStore}>
