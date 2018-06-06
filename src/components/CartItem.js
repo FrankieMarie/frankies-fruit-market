@@ -11,6 +11,10 @@ const CartItem = ({item, fruit}) => {
             <p>Price: $ {fruit.price} / <small>box</small></p>
             <p>Quantity: {item.quantity} <small>box</small></p>
             <p>Item Total: $ {item.quantity * fruit.price}</p>
+            <button
+              className="remove-button">
+              <i><i className="fas fa-times"></i> Remove</i>
+            </button>
           </div>
         </li>
       </ul>

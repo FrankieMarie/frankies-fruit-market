@@ -332,3 +332,10 @@ label {
   min-width: 10em;
   object-fit: cover;
 }
+.remove-button {
+  padding: 0;
+  border-style: none;
+  color: #e72f51;
+  border-bottom: 1px solid #e72f51;
+  cursor: pointer;
+}
