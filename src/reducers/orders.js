@@ -1,4 +1,4 @@
-import { FETCH_ORDERS_PENDING, FETCH_ORDERS_SUCCESS, FETCH_ORDERS_FAILED } from '../actions/orders'
+import { FETCH_ORDERS_PENDING, FETCH_ORDERS_SUCCESS, FETCH_ORDERS_FAILED, ADD_TO_ORDER } from '../actions/orders'
 
 let initialState = []
 
@@ -10,6 +10,8 @@ export default(state = initialState, action) => {
       return [...action.payload.data.orders]
     case FETCH_ORDERS_FAILED:
       return action.payload
+    case ADD_TO_ORDER:
+      return [...state, action.payload]
     default:
       return state
   }

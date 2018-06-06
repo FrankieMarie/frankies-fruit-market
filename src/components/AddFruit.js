@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 class AddFruit extends Component {
   render() {
     const admin = this.props.admin
-    if (admin.isAuthed === true) {
+    if (admin.isAuthed) {
       return (
         <div>
           <h1 id="add-fruit-header">Add a Fruit:</h1>

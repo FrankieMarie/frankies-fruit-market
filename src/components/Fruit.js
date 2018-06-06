@@ -1,6 +1,9 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { addToOrder } from '../actions/orders'
 
-const Fruit = ({fruit}) => {
+const Fruit = ({ fruit, addToOrder}) => {
   let {_id, name, price, description, fruitImage} = fruit
   let desc = {description}
   return (
@@ -15,9 +18,18 @@ const Fruit = ({fruit}) => {
           </a>
         </p>
       </div>
-      <button className="btn">Add to Cart</button>
+      <button
+        className="btn"
+        onClick={() => addToOrder(_id)}
+      >
+        Add to Cart
+      </button>
     </div>
   )
 }
 
-export default Fruit
+const mapDispatchToProps = dispatch => bindActionCreators({
+  addToOrder
+}, dispatch)
+
+export default connect(null, mapDispatchToProps)(Fruit)
