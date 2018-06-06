@@ -6,6 +6,8 @@ import TopNav from './TopNav'
 class Cart extends Component {
   render() {
     let orderList = this.props.orders.map(item => <CartItem key={item._id} item={item} fruit={item.fruit}/>)
+    let itemTotals = this.props.orders.map(item => item.fruit.price)
+    let total = itemTotals.length > 0 ? itemTotals.reduce((acc, cv) => acc + cv) : 0
     return (
       <div>
         <TopNav /><br/>
@@ -13,7 +15,7 @@ class Cart extends Component {
           {orderList}
         </div>
         <hr/>
-        <p>Grand Total: $</p>
+        <p>Grand Total: $ {total}</p>
         <button className="btn">Checkout</button>
       </div>
     )
