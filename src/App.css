@@ -315,3 +315,20 @@ label {
 }
 
 #add-fruit-header {text-align: center;}
+
+/* CART */
+.cart-item-li {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+.cart-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+.cart-item-image {
+  max-width: 15vw;
+  min-width: 10em;
+  object-fit: cover;
+}
