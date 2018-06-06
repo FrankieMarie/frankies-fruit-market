@@ -199,18 +199,119 @@ nav {
   margin-left: -47.997px;
   position: absolute;
   width: 100%;
-  height: 5vh;
+  height: 7vh;
   background-color: #e72f51;
 }
 
 .admin-login {
   color: #fff;
   text-decoration: none;
-  padding: 1.1em;
+  padding: 1.3em;
   float: right;
 }
 
 .admin-login:hover {color: #d8d8d8;}
 
 /* LOGIN */
+.logo-login {
+  background-image: url("./ffm_logo.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 15vh;
+}
 
+form {text-align: center;}
+
+label {
+  display: block;
+  letter-spacing: .2em;
+  padding-top: 2em;
+  text-align: center;
+}
+
+.label-text {
+  display: block;
+  color: #9B9B9B;
+  cursor: text;
+  font-size: 1em;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+.login-form {
+  font-size: 1em;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #e72f51;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
+}
+
+.login-form:focus {
+  max-width: 100%;
+  width: 30em;
+}
+
+.login-btn {
+  background-color: transparent;
+  border: 2px solid #e72f51;
+  border-radius: 1em;
+  cursor: pointer;
+  font-size: 1em;
+  color: #9B9B9B;
+  margin-top: 2em;
+  padding: .5em 1.5em;
+  text-transform: uppercase;
+  transition: all 200ms;
+}
+
+.login-btn:hover {
+  background-color: #e72f51;
+  color: white;
+  outline: 0;
+}
+
+.hbtn {
+  border: none;
+  margin-top: 3em;
+}
+
+.home-btn {
+  background: #e72f51;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  border-radius: 2em;
+  cursor: pointer;
+  border-style: none;
+}
+
+.home-btn:hover {
+  background: #eaeaea;
+  color: #333;
+}
+
+/* ADD FRUIT FORM */
+
+.add-fruit-form {
+  font-size: 1em;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #e72f51;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 200px;
+}
+
+.add-fruit-form:focus {
+  max-width: 100%;
+  width: 30em;
+}
+
+#add-fruit-header {text-align: center;}
