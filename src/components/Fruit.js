@@ -25,10 +25,16 @@ const Fruit = (props) => {
       >
         Add to Cart
       </button>
+
+      {props.admin.isAuthed ? <button
+        className="edit-fruit-btn"
+      > Edit</button> : null}
+
       {props.admin.isAuthed ? <button
         className="delete-fruit-btn"
         onClick={() => props.deleteFruit(_id)}
-      > Delete X </button> : null}
+      > Delete</button> : null}
+
     </div>
   )
 }

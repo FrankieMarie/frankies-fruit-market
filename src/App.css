@@ -92,12 +92,14 @@ nav {
   color: #333;
 }
 
-.delete-fruit-btn {
+.delete-fruit-btn, .edit-fruit-btn {
   border: none;
   color: #e72f51;
   cursor: pointer;
+  text-decoration: underline;
+  margin: 0 0 0 4em;
 }
-.delete-fruit-btn:hover {font-style: italic;}
+.delete-fruit-btn:hover, .edit-fruit-btn:hover {font-style: italic; font-weight: bold;}
 
 @media screen and (max-width: 1200px) {
   .card img{
