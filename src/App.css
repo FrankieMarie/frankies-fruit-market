@@ -203,21 +203,14 @@ nav {
   background-color: #e72f51;
 }
 
-.add-fruit {
+.admin-login, .add-fruit {
   color: #fff;
   text-decoration: none;
   padding: 1.3em;
   float: right;
 }
 
-.admin-login {
-  color: #fff;
-  text-decoration: none;
-  padding: 1.3em;
-  float: right;
-}
-
-.admin-login:hover {color: #d8d8d8;}
+.admin-login:hover, .add-fruit:hover {font-weight: bold;}
 
 /* LOGIN */
 .logo-login {
