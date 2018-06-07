@@ -5,6 +5,7 @@ export const FETCH_ORDERS_SUCCESS = "FETCH_ORDERS_SUCCESS"
 export const FETCH_ORDERS_FAILED = "FETCH_ORDERS_FAILED"
 
 export const ADD_TO_ORDER = "ADD_TO_ORDER"
+export const DELETE_FROM_ORDER = "DELETE_FROM_ORDER"
 
 export const fetchOrders = () => {
   return async dispatch => {
@@ -31,14 +32,26 @@ export const addToOrder = (item) => {
     fruitId: item,
     quantity: 1
   }
-  console.log('blah')
   return (dispatch) => {
-    console.log(item)
     axios.post("http://localhost:8000/orders", newItem)
       .then(response => {
-        console.log(response.data)
         dispatch({
           type: ADD_TO_ORDER,
+          payload: response.data
+        })
+      })
+      .catch(error => {
+        throw(error)
+      })
+  }
+}
+
+export const deleteFromOrder = (id) => {
+  return (dispatch) => {
+    axios.delete(`http://localhost:8000/orders/${id}`)
+      .then(response => {
+        dispatch({
+          type: DELETE_FROM_ORDER,
           payload: response.data
         })
       })
