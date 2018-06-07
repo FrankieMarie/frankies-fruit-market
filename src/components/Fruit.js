@@ -2,9 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addToOrder } from '../actions/orders'
+import { deleteFruit } from '../actions/fruits'
 
-const Fruit = ({ fruit, addToOrder}) => {
-  let {_id, name, price, description, fruitImage} = fruit
+const Fruit = (props) => {
+  let {_id, name, price, description, fruitImage} = props.fruit
   let desc = {description}
   return (
     <div className="card">
@@ -20,16 +21,25 @@ const Fruit = ({ fruit, addToOrder}) => {
       </div>
       <button
         className="btn"
-        onClick={() => addToOrder(_id)}
+        onClick={() => props.addToOrder(_id)}
       >
         Add to Cart
       </button>
+      {props.admin.isAuthed ? <button
+        className="delete-fruit-btn"
+        onClick={() => props.deleteFruit(_id)}
+      > Delete X </button> : null}
     </div>
   )
 }
 
+const mapStateToProps = (state) => ({
+  admin: state.admin
+})
+
 const mapDispatchToProps = dispatch => bindActionCreators({
-  addToOrder
+  addToOrder,
+  deleteFruit
 }, dispatch)
 
-export default connect(null, mapDispatchToProps)(Fruit)
+export default connect(mapStateToProps, mapDispatchToProps)(Fruit)

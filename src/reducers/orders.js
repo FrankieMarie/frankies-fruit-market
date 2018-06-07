@@ -2,7 +2,7 @@ import { FETCH_ORDERS_PENDING, FETCH_ORDERS_SUCCESS, FETCH_ORDERS_FAILED, ADD_TO
 
 let initialState = []
 
-export default(state = initialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ORDERS_PENDING:
       return state
