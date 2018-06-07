@@ -13,7 +13,7 @@ export default(state = initialState, action) => {
     case ADD_TO_ORDER:
       return [...state, action.payload]
     case DELETE_FROM_ORDER:
-      return [...state, action.payload]
+      return [...state.filter(val => val._id !== action.payload.orderId)]
     default:
       return state
   }
