@@ -7,17 +7,17 @@ import {
 let initialState = {
   admin: {},
   err: {},
-  isAuthed: false
+  isAuthed: !!localStorage.getItem('admin') && !(JSON.parse(localStorage.getItem('admin')).expires < Date.now() / 1000)
 }
 
 export default (state=initialState, action) => {
   switch (action.type) {
     case ADMIN_LOGIN_SUCCESS:
-      localStorage.setItem('admin', JSON.stringify(action.payload.admin))
-      localStorage.setItem('token', JSON.stringify(action.payload.token))
+      localStorage.setItem('admin', JSON.stringify(action.payload.token))
+      // localStorage.setItem('token', JSON.stringify(action.payload.token))
       return {
         ...state,
-        admin: action.payload,
+        admin: action.payload.token,
         isAuthed: true
       }
     case ADMIN_LOGIN_FAILED:

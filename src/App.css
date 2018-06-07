@@ -203,6 +203,13 @@ nav {
   background-color: #e72f51;
 }
 
+.add-fruit {
+  color: #fff;
+  text-decoration: none;
+  padding: 1.3em;
+  float: right;
+}
+
 .admin-login {
   color: #fff;
   text-decoration: none;

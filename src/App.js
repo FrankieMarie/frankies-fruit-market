@@ -8,6 +8,7 @@ import Cart from './components/Cart'
 import SingleFruit from './components/SingleFruit'
 import AddFruit from './components/AddFruit'
 import Login from './components/Login'
+import Authentication from './components/Authentication'
 
 class App extends Component {
   render() {
@@ -18,7 +19,7 @@ class App extends Component {
             <Route exact path="/" component={Main} />
             <Route path="/cart" component={Cart} />
             <Route path="/fruit/:id" component={SingleFruit} />
-            <Route path="/addfruit" component={AddFruit} />
+            <Route path="/addfruit" component={Authentication(AddFruit)} />
             <Route path="/login" component={Login} />
           </Switch>
         </div>
