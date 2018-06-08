@@ -98,8 +98,9 @@ nav {
   cursor: pointer;
   text-decoration: underline;
   margin: 0 0 0 4em;
+  font-size: 12px;
 }
-.delete-fruit-btn:hover, .edit-fruit-btn:hover {font-style: italic; font-weight: bold;}
+.delete-fruit-btn:hover, .edit-fruit-btn:hover {font-weight: bold;}
 
 @media screen and (max-width: 1200px) {
   .card img{

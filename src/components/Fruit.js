@@ -26,9 +26,10 @@ const Fruit = (props) => {
         Add to Cart
       </button>
 
-      {props.admin.isAuthed ? <button
+      {props.admin.isAuthed ? <a
         className="edit-fruit-btn"
-      > Edit</button> : null}
+        href={`/editfruit/${_id}`}
+      >Edit</a> : null}
 
       {props.admin.isAuthed ? <button
         className="delete-fruit-btn"

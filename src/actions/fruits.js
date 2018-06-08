@@ -9,6 +9,9 @@ export const ADD_FRUIT_FAILED = "ADD_FRUIT_FAILED"
 
 export const DELETE_FRUIT = "DELETE_FRUIT"
 
+export const UPDATE_FRUIT_SUCCESS = "UPDATE_FRUIT_SUCCESS"
+export const UPDATE_FRUIT_FAILED = "UPDATE_FRUIT_FAILED"
+
 export const fetchFruits = () => {
   return async dispatch => {
     try{
@@ -65,4 +68,26 @@ export const deleteFruit = (id) => {
         throw(error)
       })
   }
+}
+
+export const editFruit = (id, fruit) => {
+  return async dispatch => {
+    try{
+      let authHeader = 'Bearer ' + JSON.parse(localStorage.getItem('admin')).token
+      let formData = new FormData()
+      for(let key in fruit){
+        formData.append(key,fruit[key])
+      }
+      let updatedFruit = await axios.patch(`http://localhost:8000/fruits`, formData, { headers: { Authorization: authHeader}})
+      dispatch({
+        type: UPDATE_FRUIT_SUCCESS,
+        payload: updatedFruit
+      })
+    }catch(err) {
+      dispatch({
+        type: UPDATE_FRUIT_FAILED,
+        payload: err
+      })
+    }
+   }
 }
